@@ -1,0 +1,20 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "MVC tec-blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esilfa/Tech-Blog.git"
+  },
+  "author": "Estefany Silfa ssilfa3@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Esilfa/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/Esilfa/Tech-Blog#readme"
+}
