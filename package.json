@@ -17,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/Esilfa/Tech-Blog/issues"
   },
-  "homepage": "https://github.com/Esilfa/Tech-Blog#readme"
+  "homepage": "https://github.com/Esilfa/Tech-Blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^15.0.0",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3"
+  }
 }

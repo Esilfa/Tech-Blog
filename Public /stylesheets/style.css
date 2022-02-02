@@ -1,0 +1,44 @@
+:root {
+    background-color: rgb(218, 228, 228);
+    border-radius: .4rem;
+}
+body {
+    background-color: whitesmoke;
+    font-size: 20px;
+    color: darkolivegreen;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1, h2,h3{
+    margin: 0;
+    color: black;
+
+}
+
+.btn {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: rgb(179, 202, 140);
+    transform: translate(1px, 1px);
+}
+.btn-inline {
+    display: inline;
+}
+
+.app-title {
+    font-size: 3rem;
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 0 10px;
+    display: inline-block;
+    border-radius: var(--border-radius);
+    box-shadow: 6px 5px var(--light-dark);
+}
