@@ -35,10 +35,9 @@ h1, h2,h3{
 
 .app-title {
     font-size: 3rem;
-    background-color: var(--primary);
+    background-color: rgb(179, 202, 140);
     color: var(--dark);
     padding: 0 10px;
     display: inline-block;
-    border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
+    box-shadow: 6px 5px 
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Tech Blog</title>
+  <link rel="stylesheet" href="../Public /stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+      <header class="hero">
+          <div>
+            <nav class"nav">
+                    <a class="link" href="/">Home</a>
+                    <a class="link" href="/dashboard">Dashboard</a>
+                    {{#if loggedIn}}
+                    <a class="link" href="/" id="logout">Logout</a>
+                    {{else}}
+                    <a class="link" href="/login">Login</a>
+                    {{/if}}
+                </nav>          
+          </div>
+
+          <h1 class="app-title"><i class="fab "></i>The Tech Blog</h1>
+      </header>
+
+      <section>
+        <h2>Your Posts</h2>
+      
+      </section>
+  
+      
+      <button type="submit" class="btn"><a class="link" href="/dashboard/new">+ New Post</a></button>
+
+    <main>
+    
+    </main>
+    <div class="card">
+        <h3 class="card-header">Edit Post</h3>
+        <form class="card-body edit-post-form">
+            <label for="post-title" class="form-label">Title</label>
+            <input name="post-title" type="text" value="{{post.title}}" class="form-input" />
+            <label class="form-label" for="content">Content</label>
+            <input name="content" type="text" value="{{post.content}}" class="form-input" />
+            <button type="submit" class="btn">Update Post</button>
+            <button type="button" class="delete-post-btn btn">Delete Post</button>
+        </form>
+    </div>
+
+    <article class="post">
+
+
+    </article>
+
+  </div>
+  <div class="card">
+    <h3 class="card-header">Login</h3>
+    <form id="login-form" class="card-body">
+      <label class="form-label" for="username-login">Username</label>
+      <input  id="username-login" type="text" autofocus="true" class="form-input" />
+
+      <label class="form-label" for="password-login">Password</label>
+      <input id="password-login" type="password" autofocus="true" class="form-input" />
+
+      <button type="submit" class="btn">Login!</button>
+      <a class="login-link" href="/signup">Sign up instead</a>
+    </form>
+  </div>
+
+  
+    <script src="/Public /javascript/logout.js"></script>
+
+</body>
+
+</html>
