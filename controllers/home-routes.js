@@ -51,7 +51,7 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-outer.get('/post/:id', (req, res) => {
+router.get('/post/:id', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id

@@ -5,6 +5,7 @@ if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
     sequelize = new Sequelize(
+        "techBlog_db",
         process.env.DB_USER,
         null,
 
