@@ -1,6 +1,6 @@
-const loginFormHandler = async (event) => {
+async function loginFormHandler(event) {
+  event.preventDefault();
 
-    event.preventDefault();
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/dashboard');
       } else {
-        alert('Failed to log in');
+        alert(response.statusText);
       }
     }
   };

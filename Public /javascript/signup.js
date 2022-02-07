@@ -1,4 +1,4 @@
-const signupFormHandler = async (event) => {
+async function signupFormHandler(event) {
     event.preventDefault();
 
 
@@ -26,4 +26,5 @@ const signupFormHandler = async (event) => {
     }
 }
 
-document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
+document.querySelector('#signup-form')
+    .addEventListener('submit', signupFormHandler);

@@ -118,7 +118,7 @@ router.put('/:id', (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData[0]) {
-                res.json({ user: userData, message: 'You are now logged in!' });
+                res.status(404).json({ message: 'Incorrect username or password, please try again'});
                 return;
             }
             res.json(dbUserData);
@@ -129,22 +129,9 @@ router.put('/:id', (req, res) => {
         });
 });
 
-// res.json({ user: userData, message: 'You are now logged in!' });
-
-router.post('/logout', (req, res) => {
-    if (req.session.loggedIn) {
-        req.session.destroy(() => {
-            res.status(204).end();
-        });
-    }
-    else {
-        res.status(404).end();
-    }
-});
-
 // delete user
 
-router.delete("/user/:id", (req, res) => {
+router.delete('/:id', (req, res) => {
     User.destroy({
         where: {
             id: req.params.id
@@ -152,9 +139,7 @@ router.delete("/user/:id", (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData) {
-                res
-                    .status(400)
-                    res .status(400) .json({ message: 'Incorrect username or password, please try again' });
+                res.status(404).json({ message: 'Incorrect username or password, please try again'});
                 return;
             }
             res.json(dbUserData);

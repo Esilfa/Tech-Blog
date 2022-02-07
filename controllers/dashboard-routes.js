@@ -13,21 +13,26 @@ router.get('/', withAuth, (req, res) => {
         attributes: [
             'id',
             'title',
-            'created_at',
-            'post_content'
+            'content',
+            'created_at'
         ],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: [
+                    'id',
+                    'comment_text',
+                    'post_id',
+                    'user_id',
+                    'created_at'],
                 include: {
                     model: User,
-                    attributes: ['username', 'twitter', 'github']
+                    attributes: ['username']
                 }
             },
             {
                 model: User,
-                attributes: ['username', 'twitter', 'github']
+                attributes: ['username',]
             }
         ]
     })
@@ -59,7 +64,12 @@ router.get('/edit/:id', withAuth, (req, res) => {
         },
         {
             model: Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: [
+                'id', 
+                'comment_text',
+                 'post_id', 
+                 'user_id',
+                  'created_at'],
             include: {
                 model: User,
                 attributes: ['username']
@@ -69,7 +79,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     })
         .then(dbPostData => {
             if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
+                res.status(404).json({ message: 'No post found with id' });
                 return;
             }
 
@@ -86,4 +96,4 @@ router.get('/new', (req, res) => {
 });
 
 
-module.exports = router
+module.exports = router;

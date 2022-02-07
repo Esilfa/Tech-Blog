@@ -9,12 +9,18 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'title',
+            'content',
             'created_at',
-            'post_content'
+
         ],
         include: [{
             model: Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: [
+                'id',
+                'comment_text',
+                'post_id',
+                'user_id',
+                'created_at'],
             include: {
                 model: User,
                 attributes: ['username']
@@ -64,7 +70,12 @@ router.get('/post/:id', (req, res) => {
         ],
         include: [{
             model: Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: [
+                'id',
+                'comment_text',
+                'post_id',
+                'user_id',
+                'created_at'],
             include: {
                 model: User,
                 attributes: ['username']
@@ -78,7 +89,7 @@ router.get('/post/:id', (req, res) => {
     })
         .then(dbPostData => {
             if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
+                res.status(404).json({ message: 'No post found with id' });
                 return;
             }
             const post = dbPostData.get({ plain: true });
@@ -105,7 +116,12 @@ router.get('/posts-comments', (req, res) => {
         ],
         include: [{
             model: Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: [
+                'id',
+                'comment_text',
+                'post_id',
+                'user_id',
+                'created_at'],
             include: {
                 model: User,
                 attributes: ['username']
@@ -119,7 +135,7 @@ router.get('/posts-comments', (req, res) => {
     })
         .then(dbPostData => {
             if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
+                res.status(404).json({ message: 'No post found with id' });
                 return;
             }
             const post = dbPostData.get({ plain: true });
@@ -132,5 +148,5 @@ router.get('/posts-comments', (req, res) => {
         });
 });
 
-module.exports= router;
+module.exports = router;
 
