@@ -1,3 +1,4 @@
+console.log ('login')
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -22,5 +23,5 @@ async function loginFormHandler(event) {
   };
   
   document
-    .querySelector('.login-form')
+    .querySelector('#login-form')
     .addEventListener('submit', loginFormHandler);

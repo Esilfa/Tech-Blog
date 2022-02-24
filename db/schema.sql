@@ -1,2 +1,6 @@
 DROP DATABASE IF EXISTS  techBlog_db;
 CREATE DATABASE techBlog_db;
+
+SHOW TABLES FROM techblog_db;
+SHOW FULL TABLES FROM techblog_db;
+

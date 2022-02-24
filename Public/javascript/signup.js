@@ -1,3 +1,4 @@
+console.log('hell')
 async function signupFormHandler(event) {
     event.preventDefault();
 
