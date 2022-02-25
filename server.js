@@ -16,8 +16,7 @@ const PORT = process.env.PORT || 3001;
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-    secret: 'Pink Sky',
-    cookie: {},
+      cookie: {},
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
@@ -34,9 +33,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(  '/Public', express.static(path.join(__dirname, "Public") ));
 
+app.use(require("./controllers/index"));
 
-
-app.use(routes);
+// app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('server is running'));
