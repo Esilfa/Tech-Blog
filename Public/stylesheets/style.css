@@ -10,11 +10,29 @@ body {
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-h1, h2,h3{
+h1, h2,h3, h5, h6{
     margin: 0;
     color: black;
+    font-weight: 700;
+    line-height: 1.25;
 
 }
+       main {
+                      margin: 20px auto;
+                      width: 94%;
+                  }
+                  
+                  .wrapper {
+                      width: 100%;
+                      min-height: 100%;
+                      margin: 0 auto;
+                      display: flex;
+                      flex-direction: column;
+                  }
+                  
+                  p {
+                      font-size: 1.2rem;
+                  }
 
 .btn {
     font-size: 1.3rem;
@@ -27,12 +45,38 @@ h1, h2,h3{
     border: none;
     outline: none;
     background-color: rgb(179, 202, 140);
-    transform: translate(1px, 1px);
-}
-.btn-inline {
     display: inline;
+    margin-top: 22px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    box-shadow: cadetblue;
+    width: auto;
+    padding: 15px;
 }
 
+
+.btn-back {
+    color:cadetblue;
+    
+    background-color: rgb(179, 202, 140);
+   
+ 
+    font-size: 5.5rem;
+
+}
+.nav {
+    width: 100%;
+    position: fixed;
+    background-color: cadetblue;
+}
+.link{
+padding: 10px;
+margin: 10px;
+color: darkolivegreen;
+
+
+}
 .app-title {
     font-size: 3rem;
     background-color: rgb(179, 202, 140);
