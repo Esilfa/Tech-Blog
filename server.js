@@ -28,7 +28,7 @@ app.engine("handlebars", hbs.engine);
 app.set('view engine', 'handlebars');
 
 //   add app use
-app.use(session(sess));
+// app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(  '/Public', express.static(path.join(__dirname, "Public") ));
