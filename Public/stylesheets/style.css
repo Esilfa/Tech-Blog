@@ -1,6 +1,6 @@
 :root {
     background-color: rgb(218, 228, 228);
-    border-radius: .4rem;
+    border-radius: .5rem;
 }
 body {
     background-color: whitesmoke;
@@ -84,4 +84,15 @@ color: darkolivegreen;
     padding: 0 10px;
     display: inline-block;
     box-shadow: 6px 5px 
+}
+.card{
+    margin: 1 1 10px 0;
+    border: solid darkslategray;
+    border-radius:cadetblue ;
+}
+.card-header {
+    padding: 2%;
+    background-color:  rgb(179, 202, 140);
+    border-radius: 2%;
+
 }
